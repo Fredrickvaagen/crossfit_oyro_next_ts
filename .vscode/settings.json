@@ -4,5 +4,14 @@
   },
   // Add those two lines:
   "editor.formatOnSave": true, // Tell VSCode to format files on save
-  "editor.defaultFormatter": "esbenp.prettier-vscode" // Tell VSCode to use Prettier as default file formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": true
+  } // Tell VSCode to use Prettier as default file formatter
 }
