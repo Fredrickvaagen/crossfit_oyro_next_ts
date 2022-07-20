@@ -1,7 +1,16 @@
+import { Divider } from '@chakra-ui/react'
 import type { NextPage } from 'next'
+import HeroSection from '../components/HeroSection'
+import Membership from '../components/Membership'
 
 const Home: NextPage = () => {
-  return <h1 className="text-3xl">Hello world!</h1>
+  return (
+    <>
+      <HeroSection />
+      <Divider />
+      <Membership />
+    </>
+  )
 }
 
 export default Home
