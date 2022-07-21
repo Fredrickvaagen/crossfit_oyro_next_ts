@@ -11,9 +11,9 @@ function Video() {
         filter: 'grayscale(100%)',
         marginTop: '1rem',
       }}
-      muted
-      loop
-      autoPlay
+      muted={true}
+      loop={true}
+      autoPlay={true}
     >
       <source src="/theMurph.mp4" />
     </video>
