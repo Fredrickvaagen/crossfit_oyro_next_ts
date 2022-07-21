@@ -4,6 +4,7 @@ function Video() {
   return (
     <video
       controls
+      playsInline
       style={{
         width: '480px',
         height: 'auto',
