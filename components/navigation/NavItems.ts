@@ -13,30 +13,22 @@ export const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Om oss',
     href: '/om-oss',
-    children: [
-      {
-        label: 'Vårt team',
-        subLabel: '',
-        href: '/team',
-      },
-      {
-        label: 'Bilder',
-        subLabel: '',
-        href: '/bilder',
-      },
-    ],
+  },
+  {
+    label: 'Team',
+    href: '/team',
   },
   {
     label: 'Medlemskap',
     href: '/medlemskap',
   },
+  // {
+  //   label: 'Timeplan og Booking',
+  //   href: '/timeplan-og-booking',
+  // },
   {
-    label: 'Timeplan og Booking',
-    href: '#',
-  },
-  {
-    label: 'CF Kidz',
-    href: '#',
+    label: 'Øyro Kids',
+    href: '/kids',
   },
   {
     label: 'Kontakt',

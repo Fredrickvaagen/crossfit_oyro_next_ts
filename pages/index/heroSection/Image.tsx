@@ -9,10 +9,15 @@ export const MyImage = () => {
     <Image
       loader={myLoader}
       src="/background.jpg"
-      alt=""
+      alt="hero"
       width={500}
-      height={600}
-      style={{ borderRadius: '8px', filter: 'grayscale(100%)' }}
+      height={700}
+      style={{
+        borderRadius: '8px',
+        filter: 'grayscale(100%)',
+        marginTop: '2rem',
+      }}
+      priority
     />
   )
 }

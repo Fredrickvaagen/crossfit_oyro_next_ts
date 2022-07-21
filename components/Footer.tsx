@@ -20,7 +20,7 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
   )
 }
 
-const SocialButton = ({
+export const SocialButton = ({
   children,
   label,
   href,
@@ -64,9 +64,9 @@ export default function Footer() {
             <ListHeader>CrossFit Øyro</ListHeader>
             <Link href={'/om-oss'}>Om oss</Link>
             <Link href={'/medlemskap'}>Medlemskap</Link>
-            <Link href={'/timeplan'}>Timeplan og Booking</Link>
+            {/* <Link href={'/timeplan'}>Timeplan og Booking</Link> */}
             <Link href={'/team'}>Vårt team</Link>
-            <Link href={'/kidz'}>CrossFit Kidz</Link>
+            <Link href={'/kids'}>CrossFit Kids</Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Kontakt</ListHeader>
@@ -74,11 +74,26 @@ export default function Footer() {
           </Stack>
 
           <Stack align={'flex-start'}>
-            <ListHeader>7Fjell App</ListHeader>
+            <ListHeader>7Fjell/Øyro App</ListHeader>
+            <Link
+              target={'_blank'}
+              href={
+                'https://apps.apple.com/us/app/7-fjell-crossfit/id1370781770?uo=4&at=11l6hc&app=itunes&ct=fnd'
+              }
+            >
+              App store (Apple)
+            </Link>
+            <Link
+              target={'_blank'}
+              href={
+                'https://play.google.com/store/apps/details?id=com.bookingapp.syvfjell&hl=en&gl=US'
+              }
+            >
+              Google Play (Android)
+            </Link>
           </Stack>
         </SimpleGrid>
       </Container>
-
       <Box
         borderTopWidth={1}
         borderStyle={'solid'}

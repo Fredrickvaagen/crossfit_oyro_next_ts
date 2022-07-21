@@ -11,6 +11,7 @@ import {
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import { DesktopNav } from './navigation/DesktopNav'
 import { MobileNav } from './navigation/MobileNav'
+import Link from 'next/link'
 
 type Props = {
   children: React.ReactNode
@@ -52,13 +53,17 @@ export default function Navigation({ children }: Props) {
             />
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-            <Text
-              textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-              fontFamily={'heading'}
-              color={useColorModeValue('dark.900', 'white')}
-            >
-              CrossFit Øyro
-            </Text>
+            <Link href="/">
+              <Text
+                fontWeight={'800'}
+                _hover={{ cursor: 'pointer' }}
+                textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
+                fontFamily={'heading'}
+                color={'black'}
+              >
+                CrossFit Øyro
+              </Text>
+            </Link>
 
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
               <DesktopNav />
