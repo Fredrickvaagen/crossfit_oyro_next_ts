@@ -1,8 +1,8 @@
 import { Flex, Stack } from '@chakra-ui/react'
 import ActionButtons from './heroSection/ActionButtons'
 import Heading from './heroSection/Heading'
+import MyImage from './heroSection/Image'
 import SocialButtons from './heroSection/SocialButtons'
-import { MyImage } from './heroSection/Image'
 
 export default function HeroSection() {
   return (
