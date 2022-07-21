@@ -51,7 +51,7 @@ export default function Membership() {
         flexWrap={'wrap'}
       >
         <PriceWrapper>
-          <Box py={4} px={12}>
+          <Box py={8} px={12} p="1rem">
             <Text fontWeight="500" fontSize="2xl">
               KLIPPEKORT (12/6 klipp)
             </Text>
