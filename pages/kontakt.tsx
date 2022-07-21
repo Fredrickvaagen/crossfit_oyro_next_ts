@@ -4,16 +4,11 @@ import GoogleMapIFrame from './kontakt/GoogleMapIFrame'
 
 export default function Contact() {
   return (
-    <SimpleGrid
-      padding="2rem"
-      height="auto"
-      minChildWidth="400px"
-      spacing="40px"
-    >
-      <Box height="auto">
+    <SimpleGrid minChildWidth={['auto', '500px']} padding={['1rem', '2rem']}>
+      <Box>
         <ContactForm />
       </Box>
-      <Box height="auto">
+      <Box>
         <GoogleMapIFrame />
       </Box>
     </SimpleGrid>

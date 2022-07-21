@@ -12,6 +12,7 @@ function GoogleMapIFrame() {
         padding: '3rem',
         borderRadius: '8px',
         minHeight: '400px',
+        maxHeight: '700px',
       }}
       allowFullScreen={true}
       aria-hidden="false"

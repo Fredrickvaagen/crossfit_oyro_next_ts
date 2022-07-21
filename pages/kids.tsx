@@ -84,19 +84,13 @@ export default function SplitWithImage() {
                           Tren når du vil!
                         </ListItem>
                       </List>
-                      <Box w="80%" pt={7}>
-                        <Link href="/kontakt">
-                          <Box w="80%" pt={7}>
-                            <Button
-                              w="full"
-                              colorScheme="yellow"
-                              variant="outline"
-                            >
-                              Kjøp klippekort for kids
-                            </Button>
-                          </Box>
-                        </Link>
-                      </Box>
+                      <Link href="/kontakt">
+                        <Box w="80%" pt={7}>
+                          <Button w="full" colorScheme="blue" variant="outline">
+                            Kontakt oss for kjøp av kids klippekort
+                          </Button>
+                        </Box>
+                      </Link>
                     </VStack>
                   </PriceWrapper>
                 </Box>

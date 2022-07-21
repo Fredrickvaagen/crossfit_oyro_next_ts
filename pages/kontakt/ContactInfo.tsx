@@ -7,10 +7,12 @@ function ContactInfo() {
   return (
     <WrapItem>
       <Box>
-        <Heading>Kontakt oss</Heading>
+        <Heading marginLeft={'1rem'} marginBottom="2rem">
+          Kontakt oss
+        </Heading>
 
-        <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-          <VStack pl={0} spacing={3} alignItems="flex-start">
+        <Box>
+          <VStack alignItems="flex-start">
             <Button
               size="md"
               height="48px"

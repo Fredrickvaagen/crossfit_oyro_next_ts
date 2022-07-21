@@ -31,21 +31,16 @@ export default function ContactForm() {
   }
 
   return (
-    <Container maxW="full" mt={0} centerContent overflow="hidden">
+    <Container maxW="full">
       <Flex>
-        <Box
-          color="black"
-          borderRadius="lg"
-          m={{ sm: 4, md: 16, lg: 10 }}
-          p={{ sm: 5, md: 5, lg: 16 }}
-        >
-          <Box p={4}>
-            <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 5 }}>
+        <Box color="black" borderRadius="lg">
+          <Box>
+            <Wrap>
               <ContactInfo />
 
-              <WrapItem width={'100%'}>
+              <WrapItem width={'100%'} p="1rem">
                 <Box width={'100%'} bg="white" borderRadius="lg">
-                  <Box m={8} color="#0B0E3F">
+                  <Box color="#0B0E3F">
                     <form onSubmit={handleSubmit(onSubmit)}>
                       <FormControl isInvalid={errors.name}>
                         <FormLabel htmlFor="name">Ditt navn</FormLabel>
