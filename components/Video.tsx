@@ -3,7 +3,7 @@ import React from 'react'
 function Video() {
   return (
     <video
-      preload="/theMurph.mp4"
+      controls
       style={{
         width: '480px',
         height: 'auto',
@@ -11,9 +11,9 @@ function Video() {
         filter: 'grayscale(100%)',
         marginTop: '1rem',
       }}
-      autoPlay
       muted
       loop
+      autoPlay
     >
       <source src="/theMurph.mp4" />
     </video>
