@@ -1,7 +1,8 @@
 import { Flex, Stack } from '@chakra-ui/react'
+import Video from '../../components/Video'
 import ActionButtons from './heroSection/ActionButtons'
 import Heading from './heroSection/Heading'
-import MyImage from './heroSection/Image'
+// import MyImage from './heroSection/Image'
 import SocialButtons from './heroSection/SocialButtons'
 
 export default function HeroSection() {
@@ -21,7 +22,8 @@ export default function HeroSection() {
         </Stack>
       </Flex>
       <Flex align={'center'} justify="center">
-        <MyImage />
+        <Video />
+        {/* <MyImage /> */}
       </Flex>
     </Stack>
   )
