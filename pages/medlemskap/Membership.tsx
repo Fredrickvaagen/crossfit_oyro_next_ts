@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react'
 import { FaCheckCircle } from 'react-icons/fa'
 import Link from 'next/link'
-import { memberships } from './memberships'
+import { memberships } from '../../data/memberships'
 import PriceCard from './PriceCard'
 
 export function PriceWrapper({ children }: { children: ReactNode }) {

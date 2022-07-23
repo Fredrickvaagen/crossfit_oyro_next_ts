@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react'
 import { FaCheckCircle } from 'react-icons/fa'
 import { PriceWrapper } from './Membership'
-import { MembershipProps } from './memberships'
+import { MembershipProps } from '../../data/memberships'
 
 type PriceCardProps = {
   membership: MembershipProps
