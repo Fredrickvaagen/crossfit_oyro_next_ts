@@ -4,7 +4,7 @@ export type MembershipProps = {
   currency: string
   listItems: string[]
   monthly: boolean
-  mostValue?: boolean
+  mostValue: boolean
 }
 
 export const memberships: MembershipProps[] = [
@@ -13,6 +13,8 @@ export const memberships: MembershipProps[] = [
     currency: 'kr',
     price: '1500/850',
     monthly: false,
+    mostValue: false,
+
     listItems: [
       'Gyldighet 12 måneder',
       'Gratis introkurs (verdi 1200 kr)',
@@ -36,6 +38,8 @@ export const memberships: MembershipProps[] = [
     currency: 'kr',
     price: '900',
     monthly: true,
+    mostValue: false,
+
     listItems: [
       'Ingen binding',
       'Gratis introkurs (verdi 1200 kr)',
