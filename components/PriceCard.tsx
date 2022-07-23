@@ -11,7 +11,8 @@ import {
   VStack,
 } from '@chakra-ui/react'
 import { FaCheckCircle } from 'react-icons/fa'
-import { MembershipProps, PriceWrapper } from './Membership'
+import { PriceWrapper } from './Membership'
+import { MembershipProps } from './membership/memberships'
 
 type PriceCardProps = {
   membership: MembershipProps

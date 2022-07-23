@@ -1,4 +1,4 @@
-import { Flex, Stack } from '@chakra-ui/react'
+import { Box, Flex, Stack } from '@chakra-ui/react'
 import Video from '../../components/Video'
 import ActionButtons from './heroSection/ActionButtons'
 import Heading from './heroSection/Heading'
@@ -12,13 +12,15 @@ export default function HeroSection() {
       margin="0 auto"
       maxW="1440px"
       minHeight={['50vh', '50vh', '90vh']}
-      padding="2rem"
+      padding="1.5rem"
     >
       <Flex flex={1} align={'center'} justify={'center'}>
         <Stack w={'full'} maxW={'lg'}>
           <Heading />
           <ActionButtons />
-          <SocialButtons />
+          <Box mb="2rem !important">
+            <SocialButtons />
+          </Box>
         </Stack>
       </Flex>
       <Flex align={'center'} justify="center">

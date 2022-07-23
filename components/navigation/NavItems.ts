@@ -7,7 +7,7 @@ export interface NavItem {
 
 export const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Hjem',
+    label: 'Forside',
     href: '/',
   },
   {

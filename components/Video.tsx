@@ -10,7 +10,7 @@ function Video() {
         height: 'auto',
         borderRadius: '8px',
         filter: 'grayscale(100%)',
-        marginTop: '1rem',
+        marginTop: '0',
       }}
       muted={true}
       loop={true}

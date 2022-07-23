@@ -9,8 +9,8 @@ function ActionButtons() {
       spacing={4}
       display="flex"
       justifyContent={'center'}
-      marginTop={'3rem !important'}
-      marginBottom={'3rem !important'}
+      marginTop={'2rem !important'}
+      marginBottom={'2rem !important'}
     >
       <Link href="/kontakt">
         <Button
