@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "format": "prettier --write \"**/*.+(ts|tsx|js|jsx|json|css|md)\""
+    "format": "prettier --write \"**/*.+(ts|tsx|js|jsx|json|css|md)\"",
+    "push": "git add --a && git commit -m \"Update\" && git push"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.4",
