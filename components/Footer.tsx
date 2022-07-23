@@ -74,7 +74,7 @@ export default function Footer() {
           </Stack>
 
           <Stack align={'flex-start'}>
-            <ListHeader>7Fjell/Øyro App</ListHeader>
+            <ListHeader>CF Øyro App</ListHeader>
             <Link
               target={'_blank'}
               href={

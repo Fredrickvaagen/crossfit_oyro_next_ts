@@ -24,17 +24,19 @@ function ContactInfo() {
             >
               +47 95 55 55 68
             </Button>
-            <Button
-              size="md"
-              height="48px"
-              width="auto"
-              variant="ghost"
-              color="black"
-              _hover={{ border: '2px solid black' }}
-              leftIcon={<MdEmail color="black" size="20px" />}
-            >
-              post@7fjellcrossfit.no
-            </Button>
+            <a href="mailto:post@crossfitoyro.no">
+              <Button
+                size="md"
+                height="48px"
+                width="auto"
+                variant="ghost"
+                color="black"
+                _hover={{ border: '2px solid black' }}
+                leftIcon={<MdEmail color="black" size="20px" />}
+              >
+                post@crossfitoyro.no
+              </Button>
+            </a>
             <Button
               size="md"
               height="48px"

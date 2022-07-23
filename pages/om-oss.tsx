@@ -20,7 +20,7 @@ export default function SplitWithImage() {
               color={'black.400'}
               fontWeight={600}
               fontSize={'sm'}
-              bg={useColorModeValue('blue.50', 'blue.900')}
+              bg={useColorModeValue('yellow.50', 'black.900')}
               p={2}
               alignSelf={'flex-start'}
               rounded={'md'}
@@ -29,12 +29,11 @@ export default function SplitWithImage() {
             </Text>
             <Heading>Hos oss er alle velkommen!</Heading>
             <Text fontSize={'lg'}>
-              7Fjell CrossFit er boxen for alle, uansett mål, treningsbakgrunn
-              og alder. Vi har høyt fokus på samhold, godt humør og trivsel.
-              Vårt unike miljø gir deg en ypperlig mulighet til å bli kjent med
-              nye mennesker og skape nye vennskap. Våre dyktige trenere vil gi
-              deg en trygg og grundig opplæring i CrossFit sine
-              treningsprinsipper.
+              CrossFit Øyro er boxen for alle, uansett mål, treningsbakgrunn og
+              alder. Vi har høyt fokus på samhold, godt humør og trivsel. Vårt
+              unike miljø gir deg en ypperlig mulighet til å bli kjent med nye
+              mennesker og skape nye vennskap. Våre dyktige trenere vil gi deg
+              en trygg og grundig opplæring i CrossFit sine treningsprinsipper.
             </Text>
             <Text fontSize={'lg'}>
               Helt siden den spede start har vi hatt som mål å tilby noe for
@@ -93,7 +92,6 @@ export default function SplitWithImage() {
               kondisjonstrening(sykling, roing, løping). ALLE, uansett form,
               alder, kjønn, stil, erfaring og humør er velkommen hos oss.
             </Text>
-            <Heading>Crossfit er for ALLE!</Heading>
           </Stack>
         </SimpleGrid>
       </Container>

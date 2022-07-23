@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ReactNode } from 'react'
 import {
   Box,
@@ -14,6 +15,8 @@ import {
 } from '@chakra-ui/react'
 import { FaCheckCircle } from 'react-icons/fa'
 import Link from 'next/link'
+import { memberships } from './memberships'
+import PriceCard from './PriceCard'
 
 export function PriceWrapper({ children }: { children: ReactNode }) {
   return (
@@ -32,17 +35,18 @@ export function PriceWrapper({ children }: { children: ReactNode }) {
 
 export default function Membership() {
   return (
-    <Box py={12} mt={['5', '10', '20']}>
+    <Box py={12}>
       <VStack spacing={2} textAlign="center">
         <Heading as="h1" fontSize="4xl">
-          Våre medlemskap
+          VÅRE MEDLEMSKAP
         </Heading>
-        <Text fontSize="lg" color={'gray.500'} p="1rem">
-          Vi har også gode tilbud til din bedrift, send oss en mail for mer
-          informasjon.
+        <Text fontSize="lg" color={'gray.500'}>
+          Vi har flere forskjellige medlemskap som passer for deg. Vi har også
+          spesial avtaler for blålys/offshore arbeidere.
         </Text>
       </VStack>
       <Stack
+        mt={['1', '5']}
         direction={{ base: 'column', md: 'row' }}
         textAlign="center"
         justify="center"
@@ -50,161 +54,9 @@ export default function Membership() {
         py={10}
         flexWrap={'wrap'}
       >
-        <PriceWrapper>
-          <Box py={8} px={12} p="1rem">
-            <Text fontWeight="500" fontSize="2xl">
-              KLIPPEKORT (12/6 klipp)
-            </Text>
-            <HStack justifyContent="center">
-              <Text fontSize="3xl" fontWeight="600">
-                kr
-              </Text>
-              <Text fontSize="5xl" fontWeight="900">
-                1500/850
-              </Text>
-            </HStack>
-          </Box>
-          <VStack
-            bg={useColorModeValue('gray.50', 'gray.700')}
-            py={4}
-            borderBottomRadius={'xl'}
-          >
-            <List spacing={3} textAlign="start" px={12}>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Gyldighet 12 måneder
-              </ListItem>
-
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Gratis introkurs (verdi 1200 kr)
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Tren når du vil!
-              </ListItem>
-            </List>
-            <Link href="/kontakt">
-              <Box w="80%" pt={7}>
-                <Button w="full" colorScheme="blue" variant="outline">
-                  Kjøp
-                </Button>
-              </Box>
-            </Link>
-          </VStack>
-        </PriceWrapper>
-
-        <PriceWrapper>
-          <Box position="relative">
-            <Box
-              position="absolute"
-              top="-16px"
-              left="50%"
-              style={{ transform: 'translate(-50%)' }}
-            >
-              <Text
-                textTransform="uppercase"
-                bg={useColorModeValue('blue.300', 'blue.700')}
-                px={3}
-                py={1}
-                color={useColorModeValue('gray.900', 'gray.300')}
-                fontSize="sm"
-                fontWeight="600"
-                rounded="xl"
-              >
-                Mest for pengene
-              </Text>
-            </Box>
-            <Box py={4} px={12}>
-              <Text fontWeight="500" fontSize="2xl">
-                12 MÅNEDER
-              </Text>
-              <HStack justifyContent="center">
-                <Text fontSize="3xl" fontWeight="600">
-                  kr
-                </Text>
-                <Text fontSize="5xl" fontWeight="900">
-                  750
-                </Text>
-                <Text fontSize="3xl" color="gray.500">
-                  /måned
-                </Text>
-              </HStack>
-            </Box>
-            <VStack
-              bg={useColorModeValue('gray.50', 'gray.700')}
-              py={4}
-              borderBottomRadius={'xl'}
-            >
-              <List spacing={3} textAlign="start" px={12}>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  Gunstigere pris
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  Gratis introkurs (verdi 1200 kr)
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  Studentrabatt (-100,- kr)
-                </ListItem>
-              </List>
-              <Link href="/kontakt">
-                <Box w="80%" pt={7}>
-                  <Button w="full" colorScheme="blue" variant="outline">
-                    Kjøp
-                  </Button>
-                </Box>
-              </Link>
-            </VStack>
-          </Box>
-        </PriceWrapper>
-        <PriceWrapper>
-          <Box py={4} px={12}>
-            <Text fontWeight="500" fontSize="2xl">
-              LØPENDE
-            </Text>
-            <HStack justifyContent="center">
-              <Text fontSize="3xl" fontWeight="600">
-                kr
-              </Text>
-              <Text fontSize="5xl" fontWeight="900">
-                900
-              </Text>
-              <Text fontSize="3xl" color="gray.500">
-                /måned
-              </Text>
-            </HStack>
-          </Box>
-          <VStack
-            bg={useColorModeValue('gray.50', 'gray.700')}
-            py={4}
-            borderBottomRadius={'xl'}
-          >
-            <List spacing={3} textAlign="start" px={12}>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Ingen binding
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Gratis introkurs (verdi 1200 kr)
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Studentrabatt (-100,- kr)
-              </ListItem>
-            </List>
-            <Link href="/kontakt">
-              <Box w="80%" pt={7}>
-                <Button w="full" colorScheme="blue" variant="outline">
-                  Kjøp
-                </Button>
-              </Box>
-            </Link>
-          </VStack>
-        </PriceWrapper>
+        {memberships.map((e, index) => {
+          return <PriceCard membership={e} key={index} />
+        })}
       </Stack>
     </Box>
   )

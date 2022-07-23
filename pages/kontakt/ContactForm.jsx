@@ -8,27 +8,17 @@ import {
   FormControl,
   FormLabel,
   Input,
-  FormErrorMessage,
   Textarea,
+  Text,
 } from '@chakra-ui/react'
-import { useForm } from 'react-hook-form'
 import ContactInfo from './ContactInfo'
+import React from 'react'
+import { useForm, ValidationError } from '@formspree/react'
 
 export default function ContactForm() {
-  const {
-    handleSubmit,
-    register,
-    formState: { errors, isSubmitting },
-  } = useForm()
-
-  function onSubmit(values) {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        alert(JSON.stringify(values, null, 2))
-        resolve()
-      }, 3000)
-    })
-  }
+  const [state, handleSubmit] = useForm(
+    process.env.NEXT_PUBLIC_FORM ?? 'xlezqwoo'
+  )
 
   return (
     <Container maxW="full">
@@ -41,86 +31,94 @@ export default function ContactForm() {
               <WrapItem width={'100%'} p="1rem">
                 <Box width={'100%'} bg="white" borderRadius="lg">
                   <Box color="#0B0E3F">
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                      <FormControl isInvalid={errors.name}>
+                    <form onSubmit={handleSubmit}>
+                      <FormControl>
                         <FormLabel htmlFor="name">Ditt navn</FormLabel>
                         <Input
                           id="name"
                           placeholder="Ditt navn"
-                          {...register('name', {
-                            required: 'Dette feltet er påkrevd',
-                            minLength: {
-                              value: 4,
-                              message: 'Minumum lengde er 4 bokstaver',
-                            },
-                          })}
+                          name="name"
+                          disabled={state.isSubmitting || state.succeeded}
+                          minLength={3}
                         />
-                        <FormErrorMessage>
-                          {errors.name && errors.name.message}
-                        </FormErrorMessage>
+
+                        <ValidationError
+                          prefix="Name"
+                          field="name"
+                          errors={state.errors}
+                        />
                       </FormControl>
-                      <FormControl marginTop={2} isInvalid={errors.email}>
+                      <FormControl marginTop={2}>
                         <FormLabel htmlFor="name">Email</FormLabel>
                         <Input
                           id="email"
+                          type="email"
+                          name="email"
                           placeholder="Email"
-                          {...register('email', {
-                            required: 'Dette feltet er påkrevd',
-                            pattern: {
-                              value:
-                                /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                              message: 'Dette er ikke en gyldig email',
-                            },
-                          })}
+                          disabled={state.isSubmitting || state.succeeded}
+                          minLength={5}
                         />
-                        <FormErrorMessage>
-                          {errors.email && errors.email.message}
-                        </FormErrorMessage>
+
+                        <ValidationError
+                          prefix="email"
+                          field="email"
+                          errors={state.errors}
+                        />
                       </FormControl>
-                      <FormControl marginTop={2} isInvalid={errors.subject}>
+                      <FormControl marginTop={2}>
                         <FormLabel htmlFor="subject">Emne</FormLabel>
                         <Input
+                          disabled={state.isSubmitting || state.succeeded}
                           id="subject"
                           placeholder="Emne"
-                          {...register('subject', {
-                            required: 'Dette feltet er påkrevd',
-                            minLength: {
-                              value: 4,
-                              message: 'Minimum lengde er 4 bokstaver',
-                            },
-                          })}
+                          name="subject"
+                          minLength={4}
                         />
-                        <FormErrorMessage>
-                          {errors.subject && errors.message.message}
-                        </FormErrorMessage>
+                        <ValidationError
+                          prefix="Subject"
+                          field="subject"
+                          errors={state.errors}
+                        />
                       </FormControl>
-                      <FormControl marginTop={2} isInvalid={errors.message}>
+                      <FormControl marginTop={2}>
                         <FormLabel htmlFor="message">Emne</FormLabel>
                         <Textarea
-                          id="subject"
+                          disabled={state.isSubmitting || state.succeeded}
+                          id="message"
                           placeholder="Melding"
-                          {...register('message', {
-                            required: 'Dette feltet er påkrevd',
-                            minLength: {
-                              value: 5,
-                              message: 'Minimum lengde er 5 bokstaver',
-                            },
-                          })}
+                          name="message"
+                          minLength={10}
                         />
-                        <FormErrorMessage>
-                          {errors.message && errors.message.message}
-                        </FormErrorMessage>
+                        <ValidationError
+                          prefix="Message"
+                          field="message"
+                          errors={state.errors}
+                        />
                       </FormControl>
 
-                      <Button
-                        mt={4}
-                        width="100%"
-                        colorScheme="yellow"
-                        isLoading={isSubmitting}
-                        type="submit"
-                      >
-                        Send
-                      </Button>
+                      {state.succeeded ? (
+                        <Text mt="1rem" color="green">
+                          Takk for meldingen. Vi vil kontakte deg så snart som
+                          mulig!
+                        </Text>
+                      ) : (
+                        <Button
+                          mt={4}
+                          width="100%"
+                          colorScheme="yellow"
+                          disabled={state.submitting}
+                          type="submit"
+                          data-sitekey="reCAPTCHA_site_key"
+                        >
+                          Send
+                        </Button>
+                      )}
+                      {state.errors && state.errors.length > 0 && (
+                        <Text mt="1rem" color="red">
+                          Noe gikk galt. Vennligst prøv igjen.{' '}
+                          {state.errors.map((error) => error.message)}
+                        </Text>
+                      )}
                     </form>
                   </Box>
                 </Box>

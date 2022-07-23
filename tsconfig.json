@@ -19,7 +19,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/kontakt/ContactForm.jsx"
+    "pages/kontakt/ContactForm.jsx",
+    "pages/api/sendgrid.js¨"
   ],
   "exclude": ["node_modules"]
 }

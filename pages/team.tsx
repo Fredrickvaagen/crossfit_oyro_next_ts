@@ -12,7 +12,10 @@ import React from 'react'
 function Team() {
   return (
     <>
-      <Wrap height="auto" padding="2rem">
+      <Box pl={['0.5rem', '2rem']} pt={['0.5rem', '2rem']}>
+        <Heading>VÅRE TRENERE</Heading>
+      </Box>
+      <Wrap height="auto" padding={['0.5rem', '2rem']}>
         <WrapItem>
           <Center maxW="700px" h="auto">
             <Box padding="1rem">
@@ -55,7 +58,6 @@ function Team() {
                   Tim Herland
                 </Heading>
                 <Text fontWeight={'bold'} paddingBottom="1rem">
-                  {' '}
                   CrossFit Level 1 coach, klatreleder inne og medeier av 7 Fjell
                   CrossFit
                 </Text>
