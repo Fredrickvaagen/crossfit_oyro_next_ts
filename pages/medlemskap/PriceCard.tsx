@@ -22,7 +22,7 @@ export default function PriceCard({ membership }: PriceCardProps) {
   return (
     <PriceWrapper>
       <Box position="relative">
-        {membership.mostValue ? (
+        {membership.mostValue === true ? (
           <Box
             position="absolute"
             top="-16px"
