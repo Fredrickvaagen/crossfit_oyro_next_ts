@@ -18,7 +18,7 @@ export type MembershipProps = {
   mostValue: boolean
 }
 
-export const memberships: MembershipProps[] = [
+const memberships: MembershipProps[] = [
   {
     title: 'Klippekort (12/6 klipp)',
     currency: 'kr',
@@ -50,7 +50,6 @@ export const memberships: MembershipProps[] = [
     price: '900',
     monthly: true,
     mostValue: false,
-
     listItems: [
       'Ingen binding',
       'Gratis introkurs (verdi 1200 kr)',
@@ -81,7 +80,7 @@ export default function Membership() {
         <Heading as="h1" fontSize="4xl">
           VÅRE MEDLEMSKAP
         </Heading>
-        <Text fontSize="lg" color={'gray.500'}>
+        <Text fontSize="lg" color={'gray.500'} pl="2rem" pr="2rem">
           Vi har flere forskjellige medlemskap som passer for deg. Vi har også
           spesial avtaler for blålys/offshore arbeidere.
         </Text>

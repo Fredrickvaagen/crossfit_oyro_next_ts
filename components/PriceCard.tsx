@@ -18,7 +18,6 @@ type PriceCardProps = {
 }
 
 export default function PriceCard({ membership }: PriceCardProps) {
-  console.log(membership)
   return (
     <PriceWrapper>
       <Box position="relative">

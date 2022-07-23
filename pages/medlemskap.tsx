@@ -15,7 +15,7 @@ import {
 import Link from 'next/link'
 import React from 'react'
 import { FaCheckCircle } from 'react-icons/fa'
-import { PriceWrapper } from './medlemskap/Membership'
+import { PriceWrapper } from '../components/Membership'
 
 function Medlemskap() {
   return (

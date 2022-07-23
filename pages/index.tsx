@@ -1,7 +1,7 @@
 import { Divider } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import HeroSection from './index/HeroSection'
-import Membership from './medlemskap/Membership'
+import Membership from '../components/Membership'
 
 const Home: NextPage = () => {
   return (

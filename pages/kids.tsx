@@ -17,7 +17,7 @@ import {
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import { FaCheckCircle } from 'react-icons/fa'
-import { PriceWrapper } from './medlemskap/Membership'
+import { PriceWrapper } from '../components/Membership'
 
 export default function SplitWithImage() {
   return (
