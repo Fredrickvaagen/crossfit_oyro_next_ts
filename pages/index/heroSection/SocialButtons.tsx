@@ -6,7 +6,7 @@ import {
   FaGooglePlay,
   FaAppStore,
 } from 'react-icons/fa'
-import { SocialButton } from '../../../components/Footer'
+import { SocialButton } from '../../../components/SocialButton'
 
 function SocialButtons() {
   return (
@@ -18,6 +18,7 @@ function SocialButtons() {
         >
           <FaFacebook />
         </SocialButton>
+
         <SocialButton
           label={'Instagram'}
           href={'https://www.instagram.com/crossfit_oyro/'}
@@ -32,6 +33,7 @@ function SocialButtons() {
         >
           <FaGooglePlay />
         </SocialButton>
+
         <SocialButton
           label={'Appstore'}
           href={

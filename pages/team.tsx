@@ -22,7 +22,7 @@ function Team() {
               <Image
                 maxHeight={'350px'}
                 borderRadius={'4px'}
-                src="/kristine.jpeg"
+                src="/kristine.webp"
                 alt="Kristine Aakre"
               />
               <Box>
@@ -50,7 +50,7 @@ function Team() {
               <Image
                 maxHeight={'350px'}
                 borderRadius={'4px'}
-                src="/tim.jpeg"
+                src="/tim.webp"
                 alt="Tim Herland"
               />
               <Box>

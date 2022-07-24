@@ -25,7 +25,6 @@ export default function HeroSection() {
       </Flex>
       <Flex align={'center'} justify="center">
         <Video />
-        {/* <MyImage /> */}
       </Flex>
     </Stack>
   )

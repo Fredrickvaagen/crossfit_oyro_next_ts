@@ -54,7 +54,7 @@ export default function SplitWithImage() {
             <Image
               rounded={'md'}
               alt={'feature image'}
-              src={'/owners.jpeg'}
+              src={'/owners.webp'}
               objectFit={'cover'}
             />
           </Flex>
@@ -66,7 +66,7 @@ export default function SplitWithImage() {
             <Image
               rounded={'md'}
               alt={'feature image'}
-              src={'/murph.jpeg'}
+              src={'/murph.webp'}
               objectFit={'cover'}
             />
           </Flex>

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 const myLoader = () => {
-  return `/background.jpeg`
+  return `/background.webp`
 }
 
 export default function MyImage() {
@@ -9,7 +9,7 @@ export default function MyImage() {
     <div style={{ marginTop: '2rem' }}>
       <Image
         loader={myLoader}
-        src="/background.jpeg"
+        src="/background.webp"
         alt="hero"
         width={500}
         height={700}

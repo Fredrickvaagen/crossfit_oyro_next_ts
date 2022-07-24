@@ -16,7 +16,7 @@ function Video() {
       loop={true}
       autoPlay={true}
     >
-      <source src="/theMurph.mp4" />
+      <source src="/theMurph.webm" />
     </video>
   )
 }

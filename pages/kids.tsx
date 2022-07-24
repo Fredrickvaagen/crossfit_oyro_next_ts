@@ -87,8 +87,8 @@ export default function SplitWithImage() {
           <Flex maxHeight={670}>
             <Image
               rounded={'md'}
-              alt={'feature image'}
-              src={'/group2.jpeg'}
+              alt={'crossfit øyro gruppe'}
+              src={'/group2.webp'}
               objectFit={'cover'}
             />
           </Flex>
