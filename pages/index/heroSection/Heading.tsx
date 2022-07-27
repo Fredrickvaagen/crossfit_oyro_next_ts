@@ -39,7 +39,7 @@ export default function Heading() {
   return (
     <>
       <H1>CrossFit Øyro</H1>
-      <Paragraph>Community - Kvalitet- Treningsglede - Mestring</Paragraph>
+      <Paragraph>Community - Kvalitet - Treningsglede - Mestring</Paragraph>
     </>
   )
 }
